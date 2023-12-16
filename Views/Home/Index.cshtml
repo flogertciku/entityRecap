@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class=" row text-center">
+    <div class="col-6">
+
+        @foreach(var user in ViewBag.users){
+            <div>
+            <h2> <a asp-action="Details"  asp-route-itemid="@user.UserId"> @user.Name </a>  </h2>
+            <p>@user.Height</p>
+            <p>@user.Description</p>
+            </div>
+        }
+    </div>
+    </div>
